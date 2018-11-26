@@ -53,7 +53,7 @@ public class Funktion
     
     /**
      * Fünfte Funktion: Berechnen einer Summe mit einer Ganzzahl und einer Kommazahl.
-     * @parameter Ganzzahl n und Kommazahl x
+     * @param Ganzzahl n und Kommazahl x
      * @return Ergebnis der Berechnung
      */
     public static int berechneSumme(int n, double x) 
@@ -84,6 +84,7 @@ public class Funktion
             }
             return summe;
     }
+    
     
     /**
      * Erste Funktion: Berechnen der Teilersumme
