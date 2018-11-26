@@ -16,9 +16,8 @@ public class FunktionDialog
     private final static int TEILERSUMME =1;
     private final static int PRUEFZIFFER =2;
     private final static int NULLSTELLEN =3;
-    private final static int ZAHLENTRIPEL_V1 =4;
-    private final static int ZAHLENTRIPEL_V2 =5;
-    private final static int SUMMENZEICHEN =6;
+    private final static int ZAHLENTRIPEL =4;
+    private final static int SUMMENBERECHNUNG =5;
     
     /**
      * Konstruktor.
@@ -44,7 +43,7 @@ public class FunktionDialog
                           "\n 2) ISBN Pruefziffer berechnen = 2"+
                           "\n 3) Nullstellen einer quadratischen Gleichung berechnen = 3"+
                           "\n 4) Zahlentripel zu einer oberen Schranke berechnen = 4"+
-                          "\n 5) Berechnen einer Summe = 5" +
+                          "\n 5) Berechnen der Summenfunktion = 5" +
                           "\nEnde = 0\n");
                           
         try
@@ -65,14 +64,12 @@ public class FunktionDialog
              case NULLSTELLEN:
                  System.out.println("\n"+Funktion.berechneNullstellen(readP(), readQ()));
                  break;
-             case ZAHLENTRIPEL_V1:
+             case ZAHLENTRIPEL:
                  System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
                  break;
-             case SUMMENZEICHEN:
+             case SUMMENBERECHNUNG:
                  System.out.println("\n"+Funktion.berechneSumme(readZahl(), readKommazahl()));
                  break;
-        
-
              default:
                  System.out.println("Bitte treffen Sie eine gueltige Wahl!");
                  break;
