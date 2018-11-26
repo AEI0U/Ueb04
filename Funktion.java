@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import static java.lang.Math.pow;
 /**
  * Klasse Funktion
  *
@@ -36,7 +37,7 @@ public class Funktion
         {
             for (b=a;b<max;b++)
             {
-                for (c=1;c<max;c++
+                for (c=1;c<max;c++)
                 {
                     int summe =a*a*a + b*b*b;
                     if (c*c == summe)
@@ -48,6 +49,38 @@ public class Funktion
         }
         return tripel = tripel + "\n"+zahlentripel;
     }
+    public static String berechneSumme(int n, double x) {
+        
+        
+        int i;
+        int ergebnis; 
+        double teilA;
+        double teilB;
+        double teilC;
+        double teilD;
+        int summe;
+        
+        
+        ergebnis = 0;
+        teilA = 0;
+        teilB = 0;
+        teilC = 0;
+        teilD = 0;
+        summe = 0;
+        
+        for ( i = 1; i <= n; i++ ) {
+        
+        teilA = (x - 1);
+        teilB = Math.pow(teilA, i);
+        teilC = (i * x);
+        teilD = Math.pow(teilC, i);
+        summe += teilB / teilD;
+
+        }
+        return String.valueOf(summe);
+    }
+    
+
     /**
      * Erste Funktion: Berechnen der Teilersumme
      *
