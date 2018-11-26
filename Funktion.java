@@ -12,9 +12,10 @@ public class Funktion
     private static final String MSG_POSITIVE_GANZE_ZAHL = "Hier bitte eine positive ganze Zahl eingeben.";
     private static final String MSG_POSITIVE_NEUNSTELLIGE_ZAHL = "Hier bitte eine positive neunstellige Zahl eingeben.";
     private static final String MSG_UNGUELTIGER_WERT="Hier bitte einen Wert ungleich 0 eingeben.";
-    private static final int ISBN_MAX = 999999999;
-    private static final int ISBN_MIN = 0;
-    private static final int LAENGE_ISBN = 9;
+    private static final double SUMME_Y = 1.0;
+    private static final int    ISBN_MAX = 999999999;
+    private static final int    ISBN_MIN = 0;
+    private static final int    LAENGE_ISBN = 9;
     /**
      * Standardkonstruktor der Klasse Funktionen
      */
@@ -67,7 +68,7 @@ public class Funktion
         
             for ( int i = 1; i <= n; i++ ) {
         
-                teilA = (x - 1);
+                teilA = (x - SUMME_Y);
                 teilB = Math.pow(teilA, i);
                 teilC = Math.pow(x,i);
                 teilD = i*teilC;
