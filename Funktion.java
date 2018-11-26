@@ -58,6 +58,7 @@ public class Funktion
     {   
         check ((x !=0),MSG_UNGUELTIGER_WERT);
         check ((n !=0),MSG_UNGUELTIGER_WERT);
+        
         double teilA =0;
         double teilB =0;
         double teilC =0;
@@ -85,10 +86,10 @@ public class Funktion
     public static int berechneTeilersumme(int y)
     {
         check((y>=0),MSG_POSITIVE_GANZE_ZAHL);
-        int i; 
+         
         int teilersumme = 0;
         
-        for(i =1;i*i<y;i++)
+        for(int i =1;i*i<y;i++)
         {
             if (y % i == 0)
             {
