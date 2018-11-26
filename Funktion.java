@@ -11,6 +11,7 @@ public class Funktion
 {   
     private static final String MSG_POSITIVE_GANZE_ZAHL = "Hier bitte eine positive ganze Zahl eingeben.";
     private static final String MSG_POSITIVE_NEUNSTELLIGE_ZAHL = "Hier bitte eine positive neunstellige Zahl eingeben.";
+    private static final String MSG_UNGUELTIGER_WERT="Hier bitte einen Wert ungleich 0 eingeben.";
     private static final int ISBN_MAX = 999999999;
     private static final int ISBN_MIN = 0;
     private static final int LAENGE_ISBN = 9;
@@ -24,21 +25,18 @@ public class Funktion
     /**
      * Ueb04: Vierte Funktion: Berechnen der Zahlentripel zu einer uebergebenen oberen Schranke max.
      * @param obere maximale Schranke max (>=0)
-     * @return alle Zahlentrippel fuer die gilt: a*a*a+b*b*b=c*c mit a<=b und c<=max
+     * @return alle Zahlentrippel fuer die gilt: a^3+b^3=c^2 mit a<=b und c<=max
      */
     public static String berechneZahlentripel(int max)
     {
         ArrayList<String> zahlentripel = new ArrayList<>();
         String tripel ="\nDie Zahlentripel zur oberen Schranke "+max+" sind: ";
-        int a;
-        int b;
-        int c;
-        
-        for (a=1;a<max;a++)
+                
+        for (int a=1;a<max;a++)
         {
-            for (b=a;b<max;b++)
+            for (int b=a;b<max;b++)
             {
-                for (c=1;c<max;c++)
+                for (int c=1;c<max;c++)
                 {
                     int summe =a*a*a + b*b*b;
                     if (c*c == summe)
@@ -53,33 +51,25 @@ public class Funktion
     
     /**
      * Fünfte Funktion: Berechnen einer Summe mit einer Ganzzahl und einer Kommazahl.
-     * @param Ganzzahl n und Kommazahl x
+     * @param natuerliche Zahl n (n>0) und Kommazahl x (Wobei x den Wert 0 nicht annehmen darf => Division durch 0!)
      * @return Ergebnis der Berechnung
      */
     public static int berechneSumme(int n, double x) 
     {   
-        int i;
+        check ((x !=0),MSG_UNGUELTIGER_WERT);
+        check ((n !=0),MSG_UNGUELTIGER_WERT);
+        double teilA =0;
+        double teilB =0;
+        double teilC =0;
+        double teilD =0;
+        double summe =0;
         
-        double teilA;
-        double teilB;
-        double teilC;
-        double teilD;
-        int summe;
-        
-        
-        
-        teilA = 0;
-        teilB = 0;
-        teilC = 0;
-        teilD = 0;
-        summe = 0;
-        
-            for ( i = 1; i <= n; i++ ) {
+            for ( int i = 1; i <= n; i++ ) {
         
                 teilA = (x - 1);
                 teilB = Math.pow(teilA, i);
-                teilC = (i * x);
-                teilD = Math.pow(teilC, i);
+                teilC = Math.pow(x,i);
+                teilD = i*teilC;
                 summe += teilB / teilD;
             }
             return summe;
