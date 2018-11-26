@@ -8,9 +8,10 @@ import java.util.*;
 public class FunktionDialog
 {
     
-    private       Scanner input;
-    private final String MSG_Positive_Ganze_Zahl = "\nHier eine positive ganze Zahl eingeben.";
-    private final String MSG_Rationale_Zahl ="\nHier eine rationale Zahl eingeben.";
+    private Scanner input;
+    
+    private final        String MSG_Positive_Ganze_Zahl = "\nHier eine positive ganze Zahl eingeben.";
+    private final        String MSG_Rationale_Zahl ="\nHier eine rationale Zahl eingeben.";
     private final static int ENDE =0;
     private final static int TEILERSUMME =1;
     private final static int PRUEFZIFFER =2;
@@ -28,10 +29,7 @@ public class FunktionDialog
     }
     /**
      * Methode run(): Interaktives Testprogramm. Beinhaltet 6 Auswahlmoeglichkeiten, sowie drei Exception catcher bei ungueltigen Eingaben bei den Methoden. 
-     * Die drei zu testende Funktionen sowie der Moeglichkeit das Programm mit der Eingeab "0" zu beenden.
-     * 
-     * Anmerkung Zahlentripel: Variante1 = Alle Zahlentripel, auch Zahlentripel, fuer die gilt: (a,b,c) == (b,a,c)
-     *                         Variante2 = Alle Zahlentripel, ausgenommen kummative Zahlentripel
+     * Zur Auswahl stehen die fuenf zu testende Funktionen sowie der Moeglichkeit das Programm mit der Eingabe "0" zu beenden.
      */
     
     public void run()
@@ -45,7 +43,7 @@ public class FunktionDialog
                           "\n 1) Teilersummenergebnis berechnen = 1"+
                           "\n 2) ISBN Pruefziffer berechnen = 2"+
                           "\n 3) Nullstellen einer quadratischen Gleichung berechnen = 3"+
-                          "\n 4) Zahlentripel zu einer oberen Schranke berechnen - Variante 1 - = 4"+
+                          "\n 4) Zahlentripel zu einer oberen Schranke berechnen = 4"+
                           "\n 5) Berechnen einer Summe = 5" +
                           "\nEnde = 0\n");
                           
@@ -71,7 +69,7 @@ public class FunktionDialog
                  System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
                  break;
              case SUMMENZEICHEN:
-                 System.out.println("\n"+Funktion.berechneSumme(readN(), readX()));
+                 System.out.println("\n"+Funktion.berechneSumme(readZahl(), readKommazahl()));
                  break;
         
 
@@ -107,8 +105,8 @@ public class FunktionDialog
      }
      
      /**
-     * Methode zahl() dient zum Einlesen des Parameters fuer die Berechnung der Teilersumme.
-     * @return Parameterwert fuer Methode berechneTeilersumme(zahl()).
+     * Methode zahl() dient zum Einlesen des Parameters fuer die Berechnung der Teilersumme und die Summenberechnung.
+     * @return positiver ganzzahliger Parameterwert.
      */
      public int readZahl()
      {
@@ -117,6 +115,17 @@ public class FunktionDialog
          return zahl;
      }
      
+    /**
+     * Methode readKommazahl() dient zum Einlesen der Kommazahl fuer die Summenberechnung.
+     * @return Parameterwert fuer Summenfunktion  .
+     */
+     public double readKommazahl()
+     {
+         double zahl;
+         zahl = readlnDouble("X-Wert eingeben: ");
+         return zahl;
+     }
+    
      /**
      * Methode isbn() dient zum Einlesen der zu pruefenden ISBN neunstelligen Zahl
      * @return Parameterwert fuer Methode berechnePruefziffer(isbn()).
