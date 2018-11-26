@@ -17,6 +17,8 @@ public class FunktionDialog
     private final static int NULLSTELLEN =3;
     private final static int ZAHLENTRIPEL_V1 =4;
     private final static int ZAHLENTRIPEL_V2 =5;
+    private final static int SUMMENZEICHEN =6;
+    
     /**
      * Konstruktor.
      */
@@ -44,7 +46,7 @@ public class FunktionDialog
                           "\n 2) ISBN Pruefziffer berechnen = 2"+
                           "\n 3) Nullstellen einer quadratischen Gleichung berechnen = 3"+
                           "\n 4) Zahlentripel zu einer oberen Schranke berechnen - Variante 1 - = 4"+
-                
+                          "\n 5) Berechnen einer Summe = 5" +
                           "\nEnde = 0\n");
                           
         try
@@ -67,6 +69,9 @@ public class FunktionDialog
                  break;
              case ZAHLENTRIPEL_V1:
                  System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
+                 break;
+             case SUMMENZEICHEN:
+                 System.out.println("\n"+Funktion.berechneSumme(readN(), readX()));
                  break;
         
 
@@ -101,7 +106,7 @@ public class FunktionDialog
          return max;
      }
      
-    /**
+     /**
      * Methode zahl() dient zum Einlesen des Parameters fuer die Berechnung der Teilersumme.
      * @return Parameterwert fuer Methode berechneTeilersumme(zahl()).
      */
