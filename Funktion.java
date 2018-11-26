@@ -30,6 +30,7 @@ public class Funktion
      */
     public static String berechneZahlentripel(int max)
     {
+        check ((max >0),MSG_POSITIVE_GANZE_ZAHL);
         ArrayList<String> zahlentripel = new ArrayList<>();
         String tripel ="\nDie Zahlentripel zur oberen Schranke "+max+" sind: ";
                 
