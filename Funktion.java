@@ -18,40 +18,11 @@ public class Funktion
     public Funktion()
     {  
     }
-    /**
-     * Ueb04: Vierte Funktion - Variante 1: Berechnen der Zahlentripel zu einer uebergebenen oberen Schranke max.
-     * @param obere maximale Schranke max (>=0)
-     * @return alle Zahlentrippel
-     */
-    public static String berechneZahlentripelV1(int max)
-    {
-        ArrayList<String> zahlentripel = new ArrayList<>();
-        String tripel ="\nDie Zahlentripel zur oberen Schranke "+max+" sind: ";
-        int a;
-        int b;
-        int c;
-        
-        for (a=1;a<max;a++)
-        {
-            for (b=1;b<max;b++)
-            {
-                for (c=1;c<max;c++)
-                {
-                    int summe =a*a*a + b*b*b;
-                    if (c*c == summe)
-                    {
-                        zahlentripel.add ("("+a+","+b+","+c+")");
-                    }
-                }
-            }
-        }
-        return tripel = tripel + "\n"+zahlentripel;
-    }
     
     /**
-     * Ueb04: Vierte Funktion - Variante 2: Berechnen der Zahlentripel zu einer uebergebenen oberen Schranke max.
+     * Ueb04: Vierte Funktion: Berechnen der Zahlentripel zu einer uebergebenen oberen Schranke max.
      * @param obere maximale Schranke max (>=0)
-     * @return alle Zahlentrippel, ausgenommen kommutative Zahlentripel
+     * @return alle Zahlentrippel fuer die gilt: a*a*a+b*b*b=c*c mit a<=b und c<=max
      */
     public static String berechneZahlentripelV2(int max)
     {
@@ -65,7 +36,7 @@ public class Funktion
         {
             for (b=a;b<max;b++)
             {
-                for (c=1;c<max;c++)
+                for (c=1;c<max;c++
                 {
                     int summe =a*a*a + b*b*b;
                     if (c*c == summe)
