@@ -16,8 +16,7 @@ public class FunktionDialog
     private final static int PRUEFZIFFER =2;
     private final static int NULLSTELLEN =3;
     private final static int ZAHLENTRIPEL_V1 =4;
-    // private final static int ZAHLENTRIPEL_V2 =5;
-    private final static int SUMMENZEICHEN =6;
+    private final static int ZAHLENTRIPEL_V2 =5;
     /**
      * Konstruktor.
      */
@@ -45,7 +44,7 @@ public class FunktionDialog
                           "\n 2) ISBN Pruefziffer berechnen = 2"+
                           "\n 3) Nullstellen einer quadratischen Gleichung berechnen = 3"+
                           "\n 4) Zahlentripel zu einer oberen Schranke berechnen - Variante 1 - = 4"+
-                          "\n 5) Berechnen einer Summe" +
+                
                           "\nEnde = 0\n");
                           
         try
@@ -69,9 +68,7 @@ public class FunktionDialog
              case ZAHLENTRIPEL_V1:
                  System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
                  break;
-             case SUMMENZEICHEN:
-                 System.out.println("\n"+Funktion.berechneSumme(readN(), readX()));
-                 break;
+        
 
              default:
                  System.out.println("Bitte treffen Sie eine gueltige Wahl!");
@@ -103,27 +100,8 @@ public class FunktionDialog
          max = readlnInt("Obere Schranke eingeben: ");
          return max;
      }
-     /**
-      * Methode n() dient zum Einlesen der Ganzzahl fuer die Berechnung der Summe.
-      * @return Parameterwert fuer Methode berechneSumme.
-      */
-     public int readN()
-     {
-         int n;
-         n = readlnInt("Geben Sie eine Ganzzahl ein");
-         return n;
-     }
-     /**
-      * Methode x() dient zum Einlesen der Kommazahl fuer die Berechnung der Summe.
-      * @return Parameterwert fuer Methode berechneSumme.
-      */
-     public double readX()
-     {
-        double x;
-        x = readlnInt("Geben Sie eine Kommazahl ein");
-        return x;
-     }
-     /**
+     
+    /**
      * Methode zahl() dient zum Einlesen des Parameters fuer die Berechnung der Teilersumme.
      * @return Parameterwert fuer Methode berechneTeilersumme(zahl()).
      */
