@@ -24,7 +24,7 @@ public class Funktion
      * @param obere maximale Schranke max (>=0)
      * @return alle Zahlentrippel fuer die gilt: a*a*a+b*b*b=c*c mit a<=b und c<=max
      */
-    public static String berechneZahlentripelV2(int max)
+    public static String berechneZahlentripel(int max)
     {
         ArrayList<String> zahlentripel = new ArrayList<>();
         String tripel ="\nDie Zahlentripel zur oberen Schranke "+max+" sind: ";
