@@ -44,7 +44,7 @@ public class FunktionDialog
                           "\n 2) ISBN Pruefziffer berechnen = 2"+
                           "\n 3) Nullstellen einer quadratischen Gleichung berechnen = 3"+
                           "\n 4) Zahlentripel zu einer oberen Schranke berechnen - Variante 1 - = 4"+
-                          "\n 5) Zahlentripel zu einer oberen Schranke berechnen - Variante 2 - = 5"+
+                
                           "\nEnde = 0\n");
                           
         try
@@ -66,11 +66,10 @@ public class FunktionDialog
                  System.out.println("\n"+Funktion.berechneNullstellen(readP(), readQ()));
                  break;
              case ZAHLENTRIPEL_V1:
-                 System.out.println("\n"+Funktion.berechneZahlentripelV1(readMax()));
+                 System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
                  break;
-             case ZAHLENTRIPEL_V2:
-                 System.out.println("\n"+Funktion.berechneZahlentripelV2(readMax()));
-                 break;
+        
+
              default:
                  System.out.println("Bitte treffen Sie eine gueltige Wahl!");
                  break;
