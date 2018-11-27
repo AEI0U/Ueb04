@@ -68,7 +68,7 @@ public class FunktionDialog
                  System.out.println("\n"+Funktion.berechneZahlentripel(readMax()));
                  break;
              case SUMMENBERECHNUNG:
-                 System.out.println("\n"+Funktion.berechneSumme(readZahl(), readKommazahl()));
+                 System.out.println("\nDie Summe ist ="+Funktion.berechneSumme(readZahl(), readKommazahl()));
                  break;
              default:
                  System.out.println("Bitte treffen Sie eine gueltige Wahl!");
@@ -118,9 +118,9 @@ public class FunktionDialog
      */
      public double readKommazahl()
      {
-         double zahl;
-         zahl = readlnDouble("X-Wert eingeben: ");
-         return zahl;
+         double kommazahl;
+         kommazahl = readlnDouble("X-Wert eingeben: ");
+         return kommazahl;
      }
     
      /**

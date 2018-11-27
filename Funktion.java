@@ -12,7 +12,7 @@ public class Funktion
     private static final String MSG_POSITIVE_GANZE_ZAHL = "Hier bitte eine positive ganze Zahl eingeben.";
     private static final String MSG_POSITIVE_NEUNSTELLIGE_ZAHL = "Hier bitte eine positive neunstellige Zahl eingeben.";
     private static final String MSG_UNGUELTIGER_WERT="Hier bitte einen Wert ungleich 0 eingeben.";
-    private static final double SUMME_Y = 1.0;
+    private static final int SUMME_Y = 1;
     private static final int    ISBN_MAX = 999999999;
     private static final int    ISBN_MIN = 0;
     private static final int    LAENGE_ISBN = 9;
@@ -61,21 +61,16 @@ public class Funktion
         check ((x !=0),MSG_UNGUELTIGER_WERT);
         check ((n !=0),MSG_UNGUELTIGER_WERT);
         
-        double teilA =0;
-        double teilB =0;
-        double teilC =0;
-        double teilD =0;
-        double summe =0;
+        int sumOf;
+        sumOf = 0;
         
-            for ( int i = 1; i <= n; i++ ) {
         
-                teilA = (x - SUMME_Y);
-                teilB = Math.pow(teilA, i);
-                teilC = Math.pow(x,i);
-                teilD = i*teilC;
-                summe += teilB / teilD;
-            }
-            return summe;
+        for ( int i = 1; i <= n; i++ ) {
+        
+           sumOf += (Math.pow((x-SUMME_Y), i)/(i * Math.pow(x, i)));
+               
+        }
+        return sumOf;
     }
     
     
@@ -131,7 +126,7 @@ public class Funktion
          }
     }
     /**
-     * Dritte Funktion: Nullstellen fue quadratische Gleichung berechnen mittels p-q Formel. 
+     * Dritte Funktion: Nullstellen fuer quadratische Gleichung berechnen mittels p-q Formel. 
      * Fallunterscheidung: D<0 = Komplexe Nullstelle, D>0: 2 Nullstellen oder D=0: Doppelte Nullstelle.
      * @param Variablen p und q. Beide sind vom Datentyp double
      */

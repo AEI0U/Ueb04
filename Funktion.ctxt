@@ -6,10 +6,10 @@ comment1.target=Funktion()
 comment1.text=\r\n\ Standardkonstruktor\ der\ Klasse\ Funktionen\r\n
 comment2.params=max
 comment2.target=java.lang.String\ berechneZahlentripel(int)
-comment2.text=\r\n\ Ueb04\:\ Vierte\ Funktion\:\ Berechnen\ der\ Zahlentripel\ zu\ einer\ uebergebenen\ oberen\ Schranke\ max.\r\n\ @param\ obere\ maximale\ Schranke\ max\ (>\=0)\r\n\ @return\ alle\ Zahlentrippel\ fuer\ die\ gilt\:\ a*a*a+b*b*b\=c*c\ mit\ a<\=b\ und\ c<\=max\r\n
+comment2.text=\r\n\ Ueb04\:\ Vierte\ Funktion\:\ Berechnen\ der\ Zahlentripel\ zu\ einer\ uebergebenen\ oberen\ Schranke\ max.\r\n\ @param\ obere\ maximale\ Schranke\ max\ (>\=0)\r\n\ @return\ alle\ Zahlentrippel\ fuer\ die\ gilt\:\ a^3+b^3\=c^2\ mit\ a<\=b\ und\ c<\=max\r\n
 comment3.params=n\ x
 comment3.target=int\ berechneSumme(int,\ double)
-comment3.text=\r\n\ F\u00FCnfte\ Funktion\:\ Berechnen\ einer\ Summe\ mit\ einer\ Ganzzahl\ und\ einer\ Kommazahl.\r\n\ @parameter\ Ganzzahl\ n\ und\ Kommazahl\ x\r\n\ @return\ Ergebnis\ der\ Berechnung\r\n
+comment3.text=\r\n\ F\u00FCnfte\ Funktion\:\ Berechnen\ einer\ Summe\ mit\ einer\ Ganzzahl\ und\ einer\ Kommazahl.\r\n\ @param\ natuerliche\ Zahl\ n\ (n>0)\ und\ Kommazahl\ x\ (Wobei\ x\ den\ Wert\ 0\ nicht\ annehmen\ darf\ \=>\ Division\ durch\ 0\!)\r\n\ @return\ Ergebnis\ der\ Berechnung\r\n
 comment4.params=y
 comment4.target=int\ berechneTeilersumme(int)
 comment4.text=\r\n\ Erste\ Funktion\:\ Berechnen\ der\ Teilersumme\r\n\r\n\ @param\ \ natuerliche\ Zahl\ (>\=0)\r\n\ @return\ teilersumme\r\n
@@ -18,7 +18,7 @@ comment5.target=java.lang.String\ berechnePruefziffer(long)
 comment5.text=\r\n\ Zweite\ Funktion\:\ Pruefziffer\ fuer\ ISBN\ berechnen.\r\n\r\n\ @param\ \ zu\ pruefende\ Zahl.\ in\ diesem\ Fall\ mit\ 9\ Zeichen\r\n\ @return\ isbn\ mit\ der\ pruefziffer\r\n
 comment6.params=p\ q
 comment6.target=java.lang.String\ berechneNullstellen(double,\ double)
-comment6.text=\r\n\ Dritte\ Funktion\:\ Nullstellen\ fue\ quadratische\ Gleichung\ berechnen\ mittels\ p-q\ Formel.\ \r\n\ Fallunterscheidung\:\ D<0\ \=\ Komplexe\ Nullstelle,\ D>0\:\ 2\ Nullstellen\ oder\ D\=0\:\ Doppelte\ Nullstelle.\r\n\ @param\ Variablen\ p\ und\ q.\ Beide\ sind\ vom\ Datentyp\ double\r\n
+comment6.text=\r\n\ Dritte\ Funktion\:\ Nullstellen\ fuer\ quadratische\ Gleichung\ berechnen\ mittels\ p-q\ Formel.\ \r\n\ Fallunterscheidung\:\ D<0\ \=\ Komplexe\ Nullstelle,\ D>0\:\ 2\ Nullstellen\ oder\ D\=0\:\ Doppelte\ Nullstelle.\r\n\ @param\ Variablen\ p\ und\ q.\ Beide\ sind\ vom\ Datentyp\ double\r\n
 comment7.params=bedingung\ error
 comment7.target=void\ check(boolean,\ java.lang.String)
 comment7.text=\r\n\ Check-Methode\ um\ Fehler\ zu\ erkennen\ und\ als\ \r\n\ IllegalArgumentException\ auszuwerfen.\r\n
