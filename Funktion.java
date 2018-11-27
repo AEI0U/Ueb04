@@ -66,7 +66,7 @@ public class Funktion
         
         for (int i = 1; i <= n; i++ ) 
         {
-	        berechnung = (Math.pow((x-SUMME_Y),i)/(i*Math.pow(x,i)));
+	    berechnung = (Math.pow((x-SUMME_Y),i)/(i*Math.pow(x,i)));
             summe += berechnung;
         }
         return summe;
