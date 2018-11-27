@@ -12,7 +12,7 @@ public class Funktion
     private static final String MSG_POSITIVE_GANZE_ZAHL = "Hier bitte eine positive ganze Zahl eingeben.";
     private static final String MSG_POSITIVE_NEUNSTELLIGE_ZAHL = "Hier bitte eine positive neunstellige Zahl eingeben.";
     private static final String MSG_UNGUELTIGER_WERT="Hier bitte einen Wert ungleich 0 eingeben.";
-    private static final int SUMME_Y = 1;
+    private static final double SUMME_Y = 1.0;
     private static final int    ISBN_MAX = 999999999;
     private static final int    ISBN_MIN = 0;
     private static final int    LAENGE_ISBN = 9;
@@ -61,16 +61,15 @@ public class Funktion
         check ((x !=0),MSG_UNGUELTIGER_WERT);
         check ((n !=0),MSG_UNGUELTIGER_WERT);
         
-        int sumOf;
-        sumOf = 0;
+        double berechnung = 0;
+        double summe =0;
         
-        
-        for ( int i = 1; i <= n; i++ ) {
-        
-           sumOf += (Math.pow((x-SUMME_Y), i)/(i * Math.pow(x, i)));
-               
+        for (int i = 1; i <= n; i++ ) 
+        {
+	        berechnung = (Math.pow((x-SUMME_Y),i)/(i*Math.pow(x,i)));
+            summe += berechnung;
         }
-        return sumOf;
+        return summe;
     }
     
     
